@@ -1,0 +1,31 @@
+package section7.jdbcProgram;
+import java.sql.*;
+import java.util.Scanner;
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	try {
+        Connection con = null;//Need connection object to connect to database
+        con = DriverManager.getConnection("jdbc:mysql://localhost","root","harshi");
+        //Driver manager class is used to connect to a database
+        Statement s = con.createStatement();
+        //To create a statement object,to execute queries
+        String query1 = "use section7";
+        //String query4 = "insert into studentep values (32479,'harshi')";
+        //String query1 = "alter table studentep add address varchar(100)";
+        String query2 = "alter table student drop column cgpa";
+        s.execute(query1);
+        s.execute(query2);
+        //s.addBatch(query1);
+        //s.addBatch(query2);
+        //s.addBatch(query4);
+        //s.addBatch(query1);
+        //s.executeBatch();
+        System.out.println("Given task executed successfully");
+    	}
+    	catch(Exception e) {
+    		System.out.println(e);
+    	}
+    }
+}

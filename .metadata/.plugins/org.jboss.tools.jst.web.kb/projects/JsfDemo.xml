@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="/JsfDemo/src/main/webapp/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="JsfDemo"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/endre/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+  <path value="C:/Users/endre/.m2/repository/org/jboss/spec/javax/faces/jboss-jsf-api_2.2_spec/2.2.14/jboss-jsf-api_2.2_spec-2.2.14.jar"/>
+  <path value="C:/Users/endre/.m2/repository/junit/junit/4.11/junit-4.11.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="jboss.cdi.core"/>
+  <core validator-id="jboss.jsf.core"/>
+  <el>
+   <linked-el length="11" name="%0" offset="388" path="%1"/>
+   <linked-el length="11" name="%0" offset="457" path="%1"/>
+   <linked-el length="33" name="%0" offset="489" path="%1"/>
+   <linked-el length="19" name="%0" offset="553" path="%1"/>
+   <linked-el length="11" name="%2" offset="388" path="%1"/>
+   <linked-el length="11" name="%2" offset="457" path="%1"/>
+   <linked-el length="33" name="%2" offset="489" path="%1"/>
+   <linked-el length="19" name="%2" offset="553" path="%1"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="num" value="%0"/>
+  <alias path="/JsfDemo/src/main/webapp/index.xhtml" value="%1"/>
+  <alias path="/JsfDemo/src/main/java/JsfDemo/NumberBean.java" value="%2"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+ </uris>
+</kb-project>

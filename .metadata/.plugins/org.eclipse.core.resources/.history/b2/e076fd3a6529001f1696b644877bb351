@@ -1,0 +1,45 @@
+package section7.jdbcProgram;
+import java.sql.*;
+import java.util.Scanner;
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	try {
+        Connection con = null;//Need connection object to connect to database
+        con = DriverManager.getConnection("jdbc:mysql://localhost","root","harshi");
+        //Driver manager class is used to connect to a database
+        Statement s = con.createStatement();
+        //To create a statement object,to execute queries
+        String query1 = "use section7";
+        //String query4 = "insert into studentep values (32479,'harshi')";
+        //String query1 = "alter table studentep add address varchar(100)";
+        Scanner ob = new Scanner(System.in);
+        System.out.println("Enter the ID number:");
+        int sid = ob.nextInt();
+        System.out.println("Enter the name:");
+        String sname = ob.next();
+        System.out.println("Enter the cgpa:");
+        float scgpa = ob.nextFloat();
+        //String query2 = "insert into student values ( "+id+",'"+name+"')";
+        //String query2 = "DELETE FROM student WHERE id = 32479";
+        //String query2 = "alter table student add column cgpa float";
+        String query2 = "insert into student(id,name,cgpa) values (?,?,?)";
+        PreparedStatement ps;//declare PreparedStatement object
+        ps = con.prepareStatement(query2);
+        ps.setInt(1, sid);
+        ps.setString(2, sname);
+        ps.setFloat(3, scgpa);
+        ps.executeUpdate();
+        //s.addBatch(query1);
+        //s.addBatch(query2);
+        //s.addBatch(query4);
+        //s.addBatch(query1);
+        //s.executeBatch();
+        System.out.println("Given task executed successfully");
+    	}
+    	catch(Exception e) {
+    		System.out.println(e);
+    	}
+    }
+}

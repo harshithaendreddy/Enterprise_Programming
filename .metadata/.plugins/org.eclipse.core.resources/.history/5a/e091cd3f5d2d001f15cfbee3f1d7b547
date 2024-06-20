@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<body>
+	<h1>Testing JSF</h1>
+	<h:form>
+Enter X Value : <h:inputText value="#{num.x}" type="text" />
+<br/>
+Enter Y Value : <h:inputText value="#{num.y}" type="text" />
+<br/>
+Biggest Value is : #{num.z}
+
+<br/>
+<h:commandButton action="#{num.biggest()}" value="BIGGEST" />
+</h:form>
+	</body>
+</html>

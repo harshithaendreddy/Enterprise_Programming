@@ -1,0 +1,9 @@
+path=C:\Users\endre\.m2\repository\junit\junit\4.11\junit-4.11.jar
+size=245039
+archive=0
+path=C:\Users\endre\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar
+size=45024
+archive=0
+path=C:\Users\endre\.m2\repository\org\jboss\spec\javax\faces\jboss-jsf-api_2.2_spec\2.2.14\jboss-jsf-api_2.2_spec-2.2.14.jar
+size=731616
+archive=0
