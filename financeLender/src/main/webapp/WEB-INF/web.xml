@@ -1,0 +1,37 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <context-param>
+        <param-name>jdbcUrl</param-name>
+        <param-value>jdbc:mysql://localhost:3306/sem_in</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbcUser</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbcPassword</param-name>
+        <param-value>harshi</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>ViewAllRecordsServlet</servlet-name>
+        <servlet-class>com.example.ViewAllRecordsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewAllRecordsServlet</servlet-name>
+        <url-pattern>/viewAllRecords</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HighBorrowersServlet</servlet-name>
+        <servlet-class>com.example.HighBorrowersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HighBorrowersServlet</servlet-name>
+        <url-pattern>/highBorrowers</url-pattern>
+    </servlet-mapping>
+</web-app>
+
